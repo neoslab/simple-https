@@ -15,7 +15,7 @@
  * Plugin Name: Simple HTTPS
  * Plugin URI: https://wordpress.org/plugins/simple-https/
  * Description: Correct your SSL/HTTPS issue within few clicks and enable HTTP Strict Transport Security for your website.
- * Version: 2.3.1
+ * Version: 2.3.2
  * Author: NeosLab
  * Author URI: https://neoslab.com
  * License: GPL-2.0+
@@ -37,7 +37,7 @@ if(!defined('WPINC'))
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions
 */
-define('SIMPLE_HTTPS_VERSION', '2.3.1');
+define('SIMPLE_HTTPS_VERSION', '2.3.2');
 
 /**
  * The code that runs during plugin activation

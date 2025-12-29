@@ -29,6 +29,10 @@ Simple HTTPS automatically detects if your website runs properly over HTTPS and 
 
 ## Changelog
 
+### 2.3.2 (2025-12-29)
+
+- Code revision and optimization
+
 ### 2.3.1 (2025-12-17)
 
 - Code revision and optimization
