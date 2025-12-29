@@ -1,0 +1,1 @@
+(function(a){a(function(){if(a(".input-status").length>0){a(".input-status").on("click",function(){if(a(this).is(":checked")){a("#handler-maintenance").show(100)}else{a("#handler-maintenance").hide(500)}});if(a("#handler-maintenance.show").length){a("#handler-maintenance").show()}}})})(jQuery);
