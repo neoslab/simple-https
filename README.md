@@ -29,6 +29,16 @@ Simple HTTPS automatically detects if your website runs properly over HTTPS and 
 
 ## Changelog
 
+### 2.3.3 (2026-03-03)
+
+- Fontawesome update
+- Updated ES translation
+- Updated FR translation
+- Updated ID translation
+- Updated IT translation
+- Updated PT translation
+- Code revision and optimization
+
 ### 2.3.2 (2025-12-29)
 
 - Code revision and optimization

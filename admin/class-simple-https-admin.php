@@ -128,33 +128,45 @@ class Simple_HTTPS_Admin
 	*/
 	public function return_update_options()
 	{
-		if((isset($_POST['shs-update-option'])) && ($_POST['shs-update-option'] === 'true')
+		if((isset($_POST['shs-update-option'])) && ($_POST['shs-update-option'] === 'true') 
 		&& check_admin_referer('shs-referer-form', 'shs-referer-option'))
 		{
 			$opts = array('ssl' => 'off', 'sts' => 'off');
-			$filepath = ABSPATH."/.htaccess";
+			$filepath = ABSPATH . '/.htaccess';
+
 			if(isset($_POST['_simple_https']['ssl']))
 			{
 				$opts['ssl'] = 'on';
-				if(file_exists($filepath))
+
+				if(file_exists($filepath) && is_writable($filepath))
 				{
 					$filetext = file_get_contents($filepath);
 					$htaccess = str_replace('RewriteEngine On', $this->return_htaccess_string(), $filetext);
-					$writefile = fopen($filepath, "w") or die("Unable to open file!");
-					fwrite($writefile, $htaccess);
-					fclose($writefile);
+
+					$writefile = fopen($filepath, 'w');
+					if($writefile)
+					{
+						fwrite($writefile, $htaccess);
+						fclose($writefile);
+						chmod($filepath, 0444);
+					}
 				}
 			}
 			else
 			{
-				if(file_exists($filepath))
+				if(file_exists($filepath) && is_writable($filepath))
 				{
 					$filetext = file_get_contents($filepath);
 					$findtext = $this->return_htaccess_string();
 					$htaccess = str_replace($findtext, 'RewriteEngine On', $filetext);
-					$writefile = fopen($filepath, "w") or die("Unable to open file!");
-					fwrite($writefile, $htaccess);
-					fclose($writefile);
+
+					$writefile = fopen($filepath, 'w');
+					if($writefile)
+					{
+						fwrite($writefile, $htaccess);
+						fclose($writefile);
+						chmod($filepath, 0444);
+					}
 				}
 			}
 
@@ -163,9 +175,9 @@ class Simple_HTTPS_Admin
 				$opts['sts'] = 'on';
 			}
 
-			$data = update_option('_simple_https', $opts);
-			header('location:'.admin_url('options-general.php?page=simple-https-admin').'&output=updated');
-			die();
+			update_option('_simple_https', $opts);
+			wp_redirect(admin_url('options-general.php?page=simple-https-admin&output=updated'));
+			exit;
 		}
 	}
 

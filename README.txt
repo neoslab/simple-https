@@ -2,8 +2,8 @@
 Contributors: NeosLab
 Tags: ssl, redirect, https, ssl fix, TLS
 Requires at least: 4.9
-Tested up to: 6.9.0
-Stable tag: 2.3.2
+Tested up to: 6.9.1
+Stable tag: 2.3.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -24,6 +24,15 @@ Simple HTTPS automatically detects if your website run properly over HTTPS and f
 1. A general view of the plugin "options" page.
 
 == Changelog ==
+
+= 2.3.3 (2026-03-03) =
+* Fontawesome update
+* Updated ES translation
+* Updated FR translation
+* Updated ID translation
+* Updated IT translation
+* Updated PT translation
+* Code revision and optimization
 
 = 2.3.2 (2025-12-29) =
 * Code revision and optimization
