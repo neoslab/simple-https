@@ -137,7 +137,6 @@ class Simple_HTTPS_Admin
 			if(isset($_POST['_simple_https']['ssl']))
 			{
 				$opts['ssl'] = 'on';
-
 				if(file_exists($filepath) && is_writable($filepath))
 				{
 					$filetext = file_get_contents($filepath);
