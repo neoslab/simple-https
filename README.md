@@ -29,6 +29,11 @@ Simple HTTPS automatically detects if your website runs properly over HTTPS and 
 
 ## Changelog
 
+### 2.3.4 (2026-06-01)
+
+- Remove empty line break from .htaccess
+- Code revision and optimization
+
 ### 2.3.3 (2026-03-03)
 
 - Fontawesome update
